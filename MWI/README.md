@@ -23,13 +23,3 @@ The script executes in a defined folder structure:
 ## Usage
 
 To run the `main_Mw_allWaves.py` script, ensure all necessary dependencies are installed and execute the script from the command line. The script will automatically navigate the folder structure and perform all tasks sequentially as outlined in the pipeline.
-
-## Conclusion
-
-This pipeline facilitates a streamlined approach to processing and analyzing multi-wave LSMS data for Malawi, ensuring data accuracy and consistency for further research and analysis.
-
----
-
-**Date of Documentation:** 2026-03-26 08:42:47 (UTC)
-
-**Author:** koendvos
