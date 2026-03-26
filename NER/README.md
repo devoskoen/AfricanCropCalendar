@@ -4,7 +4,7 @@
 This provides a detailed overview of the multi-cropping system in Niger, highlighting the specific crops, seasonality, and local agricultural practices. It serves as a guideline for farmers and agricultural enthusiasts.
 
 ## Main Entry Point
-The main R script for executing the multi-cropping model is located at `Niger_MultiCropping.R`. This script takes into account various environmental and economic factors to provide actionable insights for agricultural management in Niger.
+The main R scripts for executing the multi-cropping model is located at `/scripts/Niger_MultiCropping.R` and `/scripts/Niger_bis11.R`. These scripts provide the processing for 
 
 ## Contents
 - **/scripts/**: Directory containing the scripts for multi-cropping analysis.
