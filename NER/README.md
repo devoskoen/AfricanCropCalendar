@@ -1,4 +1,4 @@
-# Niger Multi-Cropping
+# Niger (NER) Processing
 
 ## Description
 This provides a detailed overview of the multi-cropping system in Niger, highlighting the specific crops, seasonality, and local agricultural practices. It serves as a guideline for farmers and agricultural enthusiasts.
