@@ -7,8 +7,10 @@ This provides a detailed overview of the multi-cropping system in Niger, highlig
 The main R scripts for executing the multi-cropping model is located at `/scripts/Niger_MultiCropping.R` and `/scripts/Niger_bis11.R`. These scripts provide the processing for 
 
 ## Contents
-- **/scripts/**: Directory containing the scripts for multi-cropping analysis.
 - **/data/**: Directory containing source datasets
+- **/metadata**: Directory containing generated metadata
+- **/out**: Directory containing the harmonized files for Niger.
+- **/scripts/**: Directory containing the scripts used multi-cropping analysis.
 
 ## Usage
 1. Clone the repository:  
@@ -17,4 +19,4 @@ The main R scripts for executing the multi-cropping model is located at `/script
    `cd AfricanCropCalendar`  
 3. Run the main scripts:  
    `Rscript scripts/Niger_MultiCropping.R`
-   'Rscript scripts/Niger_11bis.R
+   `Rscript scripts/Niger_11bis.R`
