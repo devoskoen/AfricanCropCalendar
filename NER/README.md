@@ -19,4 +19,4 @@ The main R scripts for executing the multi-cropping model is located at `/script
    `cd AfricanCropCalendar`  
 3. Run the main scripts:  
    `Rscript scripts/Niger_MultiCropping.R`
-   `Rscript scripts/Niger_11bis.R`
+   `Rscript scripts/Niger11Bis.R`
