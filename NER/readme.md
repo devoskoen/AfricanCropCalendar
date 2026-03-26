@@ -1,8 +1,0 @@
-Readme file for Niger (NER) processing:
-
-Available Folders:
-
-/data --> folder which includes the raw LSMS data per wave
-/metadata --> folder that includes the generated metadata files per wave
-/out --> folder that includes the generated data files per wave
-/scripts --> folder that includes the scripts used to harmonize raw data for Niger
