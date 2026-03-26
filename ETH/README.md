@@ -1,72 +1,7 @@
-# Ethiopia Crop Calendar Scripts
+# Ethiopia (ETH) Processing
 
-This directory contains R scripts for processing survey data from Ethiopia for the African Crop Calendar project. The scripts extract and harmonize agricultural data on planting and harvest dates.
+## Description
+This provides a detailed overview of the processing done for Ethiopia
 
-## Scripts Overview
-
-### Ethiopia_MultipleCropping11_12.R
-
-This script processes the Ethiopia LSMS (Living Standards Measurement Study) 2011-2012 data.
-
-#### Input Data Files (from `ETH_2011_ERSS_v02_M_CSV/`)
-
-- **sect9_ph_w1.csv**: Harvest module - contains harvest month begin/end
-- **sect4_pp_w1.csv**: Planting module - contains planting dates and crop information
-- **sect3_pp_w1.csv**: Field roster - contains plot area information (reported and measured)
-- **sect_cover_hh_w1.csv**: Household identification - includes region, zone, and woreda codes
-- **Pub_ETH_HouseholdGeovariables_Y1.csv**: Household GPS coordinates (LAT_DD_MOD, LON_DD_MOD)
-- **et_local_area_unit_conversion.csv**: Administrative area codes and local area unit conversions
-
-#### Data Processing Steps
-
-1. **Administrative Division Harmonization**: 
-   - Reads region, zone, and woreda codes from the conversion file
-   - Maps region IDs (1-15) to named regions (Tigray, Amhara, Oromia, Somali, Benishangul Gumuz, SNNP, Gambela, Harar, Dire Dawa, Addis Ababa, Afar)
-   - Creates standardized hierarchical administrative variables (adm1, adm2, adm3)
-
-2. **Household Data Integration**:
-   - Merges household identification with administrative divisions and GPS coordinates
-   - Ensures one record per household
-
-3. **Crop and Planting Information**:
-   - Reads planting dates and crop names from sect4
-   - Standardizes crop names to lowercase
-   - Extracts crop area shares (%)
-   - Selects planting month and year
-
-4. **Harvest Information**:
-   - Reads harvest start and end months from sect9
-   - Links harvest data to planting data using household, plot, field, and crop identifiers
-
-5. **Plot Area Conversions**:
-   - Converts reported areas from local units to hectares:
-     - Square meters: divide by 10,000
-     - Timad (local unit): divide by 4
-     - Already in hectares: no conversion
-   - Converts measured areas (GPS, in square meters) to hectares: divide by 10,000
-
-6. **Final Harmonization**:
-   - Combines all data into single record per plot-crop combination
-   - Adds standardized variables (country, dataset_name, dataset_doi)
-   - Adds GPS quality level (3 = household level)
-   - Sets unavailable variables to NA (season, harvest_month, harvest_year, adm4)
-
-#### Output
-
-**Output File**: `out/ETH_2011-12.csv`
-
-Contains the following standardized columns:
-- **Geographic**: hhID, adm1, adm2, adm3, adm4, lat, lon, GPS_level
-- **Plot Data**: fieldID, plotID
-- **Crop Data**: crop, crop_area_share
-- **Dates**: planting_month, planting_year, harvest_month_begin, harvest_month_end, harvest_month, harvest_year
-- **Area**: plot_area_reported_ha, plot_area_measured_ha, plot_area_reported_localUnit, localUnit_area
-- **Metadata**: country, dataset_name, dataset_doi
-
-#### Survey Information
-
-- **Dataset**: ETH_2011_ERSS_v02_M
-- **Country**: Ethiopia
-- **Year**: 2011-2012
-- **Survey Type**: LSMS (Living Standards Measurement Study)
-- **DOI**: https://doi.org/10.48529/80xt-9m68
+## Main Entry Point
+The main R scripts for executing the multi-cropping model are located at `/scripts/Ethiopia_MultipleCropping11_12.R`, `/scripts/Ethiopia_MultipleCropping13_14.R`, `Ethiopia_MultipleCropping13_14b.R`, `Ethiopia_MultipleCropping15_16.R`, `Ethiopia_MultipleCropping18_19.R`, and `create_allwaves.R` . These script provide the processing for the different waves in Ethiopia. 
